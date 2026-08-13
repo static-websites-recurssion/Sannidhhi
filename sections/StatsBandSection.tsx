@@ -4,12 +4,13 @@ import { AnimatedStats } from "@/components/motion/AnimatedStats";
 import { Container } from "@/components/ui/Container";
 import { PRODUCT_COUNT } from "@/data/products";
 import { CATEGORIES } from "@/data/categories";
+import { yearsInTrade } from "@/lib/constants";
 
 const stats = [
   { label: "Products in the line list", value: PRODUCT_COUNT, suffix: "+" },
-  { label: "Core categories", value: CATEGORIES.length },
-  { label: "Years collective desk experience", value: 15, suffix: "+" },
-  { label: "Dispatch modes", value: 12, suffix: "+" },
+  { label: "Catalogue sections", value: CATEGORIES.length },
+  { label: "Years supplying industry", value: yearsInTrade(), suffix: "+" },
+  { label: "Packing & dispatch modes", value: 5, suffix: "+" },
 ];
 
 export function StatsBandSection() {

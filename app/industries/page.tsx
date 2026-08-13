@@ -77,7 +77,7 @@ export default function IndustriesPage() {
                     Typical lines
                   </p>
                   <p className="mt-1 text-xs text-ink-800/65">
-                    Solvents · resins · acids · bases · intermediates · additives
+                    Solvents · acids · alkalis · inorganic salts · surfactants
                   </p>
                 </article>
               </Reveal>

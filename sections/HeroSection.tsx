@@ -11,7 +11,7 @@ import { MoleculeBg } from "@/components/decor/MoleculeBg";
 
 const trust = [
   { k: "COA-led releases", v: "Lot traceability" },
-  { k: "Drum to ISO tank", v: "Bulk & packed" },
+  { k: "Carboy to road tanker", v: "Bulk & packed" },
   { k: "Pan-India dispatch", v: "Export documentation" },
 ];
 
@@ -109,7 +109,7 @@ export function HeroSection() {
             </div>
 
             <div className="mt-3 flex items-center justify-between gap-4 rounded-2xl border border-copper/25 bg-copper/10 px-4 py-3 text-xs text-white/75">
-              <span className="font-semibold text-white/90">Download the 2025–26 line list</span>
+              <span className="font-semibold text-white/90">Profile &amp; catalogue</span>
               <Link
                 href="/assets/sannidhhi-product-catalog.pdf"
                 className="rounded-lg bg-white/15 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-white transition hover:bg-white/25"

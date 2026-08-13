@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Product categories",
-  description: `Browse chemical categories from ${SITE_NAME}—commodities, solvents, specialty chemicals, polymers, additives, and intermediates.`,
+  description: `Browse chemical categories from ${SITE_NAME}—solvents and alcohols, acids, alkalis and inorganic salts, specialty chemicals and surfactants, and packaging supplies.`,
   openGraph: {
     images: [OG_IMAGE],
     title: `Product categories | ${SITE_NAME}`,

@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { CONTACT, OG_IMAGE, SITE_NAME, getSiteUrl } from "@/lib/constants";
+import {
+  CONTACT,
+  ESTABLISHED_YEAR,
+  OG_IMAGE,
+  SITE_NAME,
+  getSiteUrl,
+} from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { Button } from "@/components/ui/Button";
@@ -20,8 +26,12 @@ const localBusiness = {
   "@type": "LocalBusiness",
   name: SITE_NAME,
   image: `${getSiteUrl()}/assets/logo.png`,
-  telephone: CONTACT.phone,
-  email: CONTACT.email,
+  telephone: [CONTACT.phone, CONTACT.phoneAlt],
+  email: [CONTACT.email, CONTACT.emailAlt],
+  taxID: CONTACT.gstin,
+  vatID: CONTACT.gstin,
+  foundingDate: String(ESTABLISHED_YEAR),
+  hasMap: CONTACT.mapsLink,
   address: {
     "@type": "PostalAddress",
     streetAddress: CONTACT.addressLines.slice(0, 2).join(", "),
@@ -97,6 +107,10 @@ export default function ContactPage() {
                       <a className="text-brand hover:underline" href={CONTACT.phoneTel}>
                         {CONTACT.phone}
                       </a>
+                      <span className="text-ink-800/40"> · </span>
+                      <a className="text-brand hover:underline" href={CONTACT.phoneAltTel}>
+                        {CONTACT.phoneAlt}
+                      </a>
                     </p>
                     <p>
                       <span className="font-semibold text-ink-900">Email:</span>{" "}
@@ -106,8 +120,30 @@ export default function ContactPage() {
                       >
                         {CONTACT.email}
                       </a>
+                      <span className="text-ink-800/40"> · </span>
+                      <a
+                        className="text-brand hover:underline"
+                        href={`mailto:${CONTACT.emailAlt}`}
+                      >
+                        {CONTACT.emailAlt}
+                      </a>
                     </p>
                   </div>
+
+                  <dl className="mt-6 space-y-2 border-t border-ink-900/10 pt-5 text-sm">
+                    <div className="flex flex-wrap gap-x-2">
+                      <dt className="font-semibold text-ink-900">GSTIN / UIN:</dt>
+                      <dd className="font-mono text-ink-800/85">{CONTACT.gstin}</dd>
+                    </div>
+                    <div className="flex flex-wrap gap-x-2">
+                      <dt className="font-semibold text-ink-900">State &amp; code:</dt>
+                      <dd className="text-ink-800/85">{CONTACT.stateCode}</dd>
+                    </div>
+                    <div className="flex flex-wrap gap-x-2">
+                      <dt className="font-semibold text-ink-900">Established:</dt>
+                      <dd className="text-ink-800/85">{ESTABLISHED_YEAR}</dd>
+                    </div>
+                  </dl>
                   <a
                     href="/assets/sannidhhi-product-catalog.pdf"
                     className="mt-8 inline-flex w-full items-center justify-center rounded-2xl border border-ink-900/15 bg-surface/80 py-3 text-sm font-semibold text-ink-900 transition hover:border-brand/40 hover:text-brand"
@@ -134,7 +170,9 @@ export default function ContactPage() {
           <div className="mt-12 overflow-hidden rounded-3xl border border-ink-900/10 bg-white shadow-sm">
             <div className="border-b border-ink-900/10 px-6 py-4">
               <h2 className="font-bold text-ink-900">Location</h2>
-              <p className="text-sm text-ink-800/70">IDA Jeedimetla · Hyderabad</p>
+              <p className="text-sm text-ink-800/70">
+                Plot No. 245/Part, SVCIE · IDA Jeedimetla · Hyderabad – 500055
+              </p>
             </div>
             <iframe
               title="Sannidhhi Chemical Industries location"

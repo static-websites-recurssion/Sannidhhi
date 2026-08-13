@@ -6,62 +6,51 @@ export type Category = {
   highlights: string[];
 };
 
+/**
+ * Sections mirror the five parts of the Sannidhhi Chemical Industries
+ * Corporate Profile & Catalogue, so a visitor browsing the site sees the same
+ * groupings as the PDF they can download.
+ */
 export const CATEGORIES: Category[] = [
   {
-    slug: "commodity-chemicals",
-    title: "Commodity Chemicals",
-    short: "High-volume industrial staples",
-    description:
-      "Reliable supply of foundational chemicals for continuous manufacturing, formulation, and toll processing at competitive scale.",
-    highlights: ["Bulk availability", "Consistent specs", "Global sourcing"],
-  },
-  {
-    slug: "semi-commodity-chemicals",
-    title: "Semi Commodity Chemicals",
-    short: "Balanced volume & specification",
-    description:
-      "Intermediate-demand products with defined purity windows—ideal for plants that need dependable quality without specialty premiums.",
-    highlights: ["Flexible lots", "Documented COA", "Repeat orders"],
-  },
-  {
     slug: "solvents",
-    title: "Solvents",
-    short: "Industrial-grade diluents & cleaners",
+    title: "Solvents, Alcohols & Organic Intermediates",
+    short: "Process solvents & alcohols",
     description:
-      "A broad solvent portfolio supporting coatings, pharma, adhesives, and extraction workflows with compliant handling guidance.",
-    highlights: ["Drums to ISO tanks", "Moisture control", "Fast dispatch"],
+      "The core solvent portfolio—ketones, ethers, alcohols, and aromatics supplied from litre packs through to road tankers for pharma, coatings, and extraction duties.",
+    highlights: ["Drums to tankers", "Commercial grade", "Fast dispatch"],
+  },
+  {
+    slug: "acids",
+    title: "Acids & Inorganic Corrosives",
+    short: "Mineral & organic acids",
+    description:
+      "Mineral and organic acids in commercial and CP grades, packed in carboys, drums, and tankers with handling guidance for corrosive consignments.",
+    highlights: ["Carboys & tankers", "CP grades", "Safe handling"],
+  },
+  {
+    slug: "alkalis-salts",
+    title: "Alkalis, Inorganic Salts & Industrial Chemicals",
+    short: "Caustics, salts & powders",
+    description:
+      "Caustics, carbonates, sulphates, and inorganic salts in bags, drums, and bulk—staples for water treatment, textile processing, and general manufacturing.",
+    highlights: ["Bagged 25/50 kg", "Bulk lots", "Consistent specs"],
   },
   {
     slug: "specialty-chemicals",
-    title: "Specialty Chemicals",
-    short: "Performance-driven molecules",
+    title: "Specialty Chemicals, Surfactants & Process Aids",
+    short: "Surfactants & process aids",
     description:
-      "Targeted chemistries for differentiated formulations—engineered for efficacy, stability, and regulatory alignment.",
-    highlights: ["Technical support", "Application notes", "Tighter specs"],
+      "Surfactants, dispersants, defoamers, catalysts, and filter aids—including branded process aids stocked for textile, agro, and bulk drug operations.",
+    highlights: ["Branded lines", "Technical support", "Specialty grades"],
   },
   {
-    slug: "additives",
-    title: "Additives",
-    short: "Process & product enhancers",
+    slug: "packaging-supplies",
+    title: "Packaging Containers & Industrial Supplies",
+    short: "Drums & industrial packing",
     description:
-      "Stabilizers, catalysts, and functional additives that improve throughput, shelf life, and end-use performance.",
-    highlights: ["Low inclusion levels", "Batch traceability", "Shelf programs"],
-  },
-  {
-    slug: "intermediates",
-    title: "Intermediates",
-    short: "Building blocks for synthesis",
-    description:
-      "Key intermediates for multi-step synthesis routes across pharma, agro, and fine chemical value chains.",
-    highlights: ["KSM support", "Impurity profiles", "Secure packaging"],
-  },
-  {
-    slug: "polymers-resins",
-    title: "Polymers & Resins",
-    short: "PVC, polyols & resin systems",
-    description:
-      "Polymer grades and resin systems for rigid and flexible applications, compounding, and surface coatings.",
-    highlights: ["Grade matching", "MFI documentation", "Project stocking"],
+      "HDPE and mild steel drums supplied as bulk units for decanting, storage, and onward despatch of solvents and chemicals.",
+    highlights: ["HDPE & M.S.", "Bulk units", "Ready stock"],
   },
 ];
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { OG_IMAGE, SITE_NAME, getSiteUrl } from "@/lib/constants";
+import { ESTABLISHED_YEAR, OG_IMAGE, SITE_NAME, getSiteUrl } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
@@ -39,9 +39,10 @@ export default function AboutPage() {
             Precision supply for industrial chemistry programs
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-white/75">
-            Sannidhhi Chemical Industries operates as a trading and supply partner—bridging verified
-            producers with plants that need predictable releases, compliant paperwork, and logistics
-            that respect production calendars.
+            Founded in {ESTABLISHED_YEAR} and based in Hyderabad’s industrial corridor at IDA
+            Jeedimetla, Sannidhhi Chemical Industries is a chemical supply, stockist, and
+            distribution firm—bridging verified producers with plants that need predictable
+            releases, compliant paperwork, and logistics that respect production calendars.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/products" variant="secondary" className="rounded-2xl">
@@ -68,7 +69,7 @@ export default function AboutPage() {
                 with on-ground release checks that align to your incoming material standards.
               </p>
               <p>
-                From drum lots to ISO tanks and export containers, we structure each movement with
+                From litre packs and carboys to drum lots and road tankers, we structure each movement with
                 documentation traceability so QA and procurement stay aligned.
               </p>
             </div>
@@ -161,8 +162,8 @@ export default function AboutPage() {
                 specs, documents arrive complete, and the desk answers when batches are on critical path.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-white/75">
-                Whether you are qualifying a new solvent line or locking resin grades for export
-                finished goods, we align commercial terms with technical reality.
+                Whether you are qualifying a new solvent line or locking bulk acid and alkali
+                supply for a plant, we align commercial terms with technical reality.
               </p>
               <div className="mt-8">
                 <Button href="/contact" variant="primary" className="rounded-2xl">

@@ -7,11 +7,11 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const featuredIds = [
   "acetone",
   "iso-propyl-alcohol-ipa",
+  "methanol",
+  "toluene-tar-toluene",
+  "caustic-soda-flakes-lye",
+  "sulphuric-acid",
   "hydrogen-peroxide",
-  "polyvinyl-chloride-resin-pvc-resin",
-  "titanium-dioxide",
-  "tri-ethyl-amine-tea",
-  "vinyl-acetate-monomer-vam",
   "mono-ethylene-glycol-meg",
 ];
 

@@ -23,12 +23,14 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Sannidhhi Chemical Industries supplies commodity to specialty chemicals, solvents, polymers, and additives for pharma, coatings, plastics, and industrial manufacturing—with export-ready documentation.",
+    "Sannidhhi Chemical Industries supplies solvents, acids, alkalis, inorganic salts, and specialty surfactants for pharma, agrochemical, textile, and industrial manufacturing—stockists in IDA Jeedimetla, Hyderabad since 2007.",
   keywords: [
     "chemical supplier India",
     "bulk chemicals Hyderabad",
     "industrial solvents",
-    "PVC resin supplier",
+    "acids and alkalis supplier",
+    "caustic soda flakes supplier",
+    "chemical stockist Jeedimetla",
     "chemical trading",
     "B2B chemicals",
     "Sannidhhi Chemical Industries",

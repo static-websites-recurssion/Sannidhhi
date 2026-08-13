@@ -18,7 +18,7 @@ export const INDUSTRIES: Industry[] = [
   {
     id: "plastics",
     title: "Plastics",
-    description: "Monomers, polymer grades, and modifiers for compounding, extrusion, and molding operations.",
+    description: "Monomers, process solvents, and additives for compounding, extrusion, and molding operations.",
   },
   {
     id: "textile",

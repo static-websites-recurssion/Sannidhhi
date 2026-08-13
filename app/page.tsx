@@ -14,7 +14,7 @@ import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Home",
-  description: `${SITE_TAGLINE} — ${SITE_NAME} supplies bulk industrial chemicals, solvents, polymers, and additives with documented quality and export-ready logistics.`,
+  description: `${SITE_TAGLINE} — ${SITE_NAME} supplies solvents, acids, alkalis, inorganic salts, and specialty surfactants with documented quality and prompt pan-India dispatch.`,
   openGraph: {
     images: [OG_IMAGE],
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,

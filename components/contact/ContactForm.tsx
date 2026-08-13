@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CONTACT } from "@/lib/constants";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -29,7 +30,7 @@ export function ContactForm() {
         <input
           name="product"
           className="mt-2 w-full rounded-xl border border-ink-900/15 bg-white px-4 py-3 text-sm outline-none focus:border-brand/40 focus:ring-4 focus:ring-brand/10"
-          placeholder="e.g. Acetone, PVC K-67, Hydrogen peroxide 50%"
+          placeholder="e.g. Acetone, Caustic soda flakes, Hydrogen peroxide"
         />
       </div>
       <div>
@@ -40,7 +41,7 @@ export function ContactForm() {
           name="volume"
           rows={3}
           className="mt-2 w-full rounded-xl border border-ink-900/15 bg-white px-4 py-3 text-sm outline-none focus:border-brand/40 focus:ring-4 focus:ring-brand/10"
-          placeholder="Drums, IBC, ISO tank, bulk — approximate quantity"
+          placeholder="Carboys, drums, bags, tanker — approximate quantity"
         />
       </div>
       <div>
@@ -64,12 +65,12 @@ export function ContactForm() {
       {sent ? (
         <p className="text-sm text-ink-800/75" role="status">
           Thank you—this is a static demo. Please email{" "}
-          <a className="font-semibold text-brand" href="mailto:sannidhhi@gmail.com">
-            sannidhhi@gmail.com
+          <a className="font-semibold text-brand" href={`mailto:${CONTACT.email}`}>
+            {CONTACT.email}
           </a>{" "}
           or call{" "}
-          <a className="font-semibold text-brand" href="tel:+917981162470">
-            +91 7981162470
+          <a className="font-semibold text-brand" href={CONTACT.phoneTel}>
+            {CONTACT.phone}
           </a>{" "}
           with the same details.
         </p>

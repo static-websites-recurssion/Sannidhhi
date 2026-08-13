@@ -17,7 +17,7 @@ export function ProductCategoriesGrid() {
           <SectionHeading
             eyebrow="Portfolio"
             title="Product categories engineered for scale"
-            subtitle="From solvents to polymers—structured like a modern catalogue with the depth industrial buyers expect."
+            subtitle="From solvents to inorganic salts—structured exactly like our catalogue, with the depth industrial buyers expect."
             align="center"
           />
         </Reveal>
