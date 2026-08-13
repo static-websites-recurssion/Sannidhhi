@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/constants";
+import { OG_IMAGE, SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/constants";
 import { HeroSection } from "@/sections/HeroSection";
 import { AboutSummarySection } from "@/sections/AboutSummarySection";
 import { ProductCategoriesGrid } from "@/sections/ProductCategoriesGrid";
@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Home",
   description: `${SITE_TAGLINE} — ${SITE_NAME} supplies bulk industrial chemicals, solvents, polymers, and additives with documented quality and export-ready logistics.`,
   openGraph: {
+    images: [OG_IMAGE],
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,
     description: `${SITE_TAGLINE} — bulk chemical supply for manufacturers across India and export markets.`,
     url: getSiteUrl(),

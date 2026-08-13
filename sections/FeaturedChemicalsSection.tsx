@@ -5,14 +5,14 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const featuredIds = [
-  "p001",
-  "p002",
-  "p005",
-  "p008",
-  "p009",
-  "p010",
-  "p025",
-  "p052",
+  "acetone",
+  "iso-propyl-alcohol-ipa",
+  "hydrogen-peroxide",
+  "polyvinyl-chloride-resin-pvc-resin",
+  "titanium-dioxide",
+  "tri-ethyl-amine-tea",
+  "vinyl-acetate-monomer-vam",
+  "mono-ethylene-glycol-meg",
 ];
 
 export function FeaturedChemicalsSection() {
@@ -21,7 +21,7 @@ export function FeaturedChemicalsSection() {
     .filter(Boolean) as (typeof PRODUCTS)[number][];
 
   return (
-    <section className="border-b border-navy-900/8 bg-surface py-16 lg:py-24">
+    <section className="border-b border-ink-900/8 bg-surface py-16 lg:py-24">
       <Container>
         <Reveal>
           <SectionHeading
@@ -31,9 +31,9 @@ export function FeaturedChemicalsSection() {
             align="center"
           />
         </Reveal>
-        <div className="mt-10 overflow-hidden rounded-2xl border border-navy-900/10 bg-white shadow-sm">
+        <div className="mt-10 overflow-hidden rounded-2xl border border-ink-900/10 bg-white shadow-sm">
           <table className="w-full text-left text-sm">
-            <thead className="bg-navy-900 text-xs font-bold uppercase tracking-wider text-white">
+            <thead className="bg-gradient-to-r from-ink-900 via-ink-900 to-brand-900 text-[11px] font-bold uppercase tracking-[0.12em] text-copper-100">
               <tr>
                 <th className="px-4 py-3 sm:px-6">Product</th>
                 <th className="hidden px-4 py-3 sm:table-cell sm:px-6">CAS</th>
@@ -41,22 +41,22 @@ export function FeaturedChemicalsSection() {
                 <th className="px-4 py-3 sm:px-6">Packaging</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-navy-900/10">
+            <tbody className="divide-y divide-ink-900/8 [&>tr:nth-child(even)]:bg-surface/40">
               {list.map((p) => (
                 <tr
                   key={p.id}
-                  className="transition hover:bg-surface/80"
+                  className="transition-colors hover:bg-copper-100/45"
                 >
-                  <td className="px-4 py-3 font-semibold text-navy-900 sm:px-6">
+                  <td className="px-4 py-3 font-semibold text-ink-900 sm:px-6">
                     {p.name}
                   </td>
-                  <td className="hidden px-4 py-3 text-navy-800/70 sm:table-cell sm:px-6">
+                  <td className="hidden px-4 py-3 text-ink-800/70 sm:table-cell sm:px-6">
                     {p.cas ?? "—"}
                   </td>
-                  <td className="hidden px-4 py-3 text-navy-800/70 md:table-cell md:px-6">
+                  <td className="hidden px-4 py-3 text-ink-800/70 md:table-cell md:px-6">
                     {p.purity ?? "—"}
                   </td>
-                  <td className="px-4 py-3 text-navy-800/80 sm:px-6">
+                  <td className="px-4 py-3 text-ink-800/80 sm:px-6">
                     {p.packaging ?? "—"}
                   </td>
                 </tr>
@@ -67,7 +67,7 @@ export function FeaturedChemicalsSection() {
         <div className="mt-8 text-center">
           <Link
             href="/products"
-            className="inline-flex rounded-2xl border border-navy-900/15 bg-white px-5 py-2.5 text-sm font-semibold text-navy-900 transition hover:border-brand-red/40 hover:text-brand-red"
+            className="inline-flex rounded-2xl border border-ink-900/15 bg-white px-5 py-2.5 text-sm font-semibold text-ink-900 transition hover:border-brand/40 hover:text-brand"
           >
             Open full catalog
           </Link>

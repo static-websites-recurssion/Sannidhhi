@@ -18,10 +18,10 @@ export function TestimonialsSection() {
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
             <Reveal key={t.org} delay={i * 0.06}>
-              <blockquote className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-gradient-to-b from-white to-surface/40 p-6 shadow-sm">
-                <p className="text-sm leading-relaxed text-navy-800/90">&ldquo;{t.quote}&rdquo;</p>
-                <footer className="mt-6 border-t border-navy-900/10 pt-4 text-xs text-navy-800/60">
-                  <p className="font-semibold text-navy-900">{t.name}</p>
+              <blockquote className="flex h-full flex-col rounded-2xl border border-ink-900/10 bg-gradient-to-b from-white to-surface/40 p-6 shadow-sm">
+                <p className="text-sm leading-relaxed text-ink-800/90">&ldquo;{t.quote}&rdquo;</p>
+                <footer className="mt-6 border-t border-ink-900/10 pt-4 text-xs text-ink-800/60">
+                  <p className="font-semibold text-ink-900">{t.name}</p>
                   <p>
                     {t.role} · {t.org}
                   </p>

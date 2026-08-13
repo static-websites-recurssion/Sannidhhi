@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 
 export function ContactPreviewSection() {
   return (
-    <section className="border-t border-navy-900/8 bg-surface py-16 lg:py-24">
+    <section className="border-t border-ink-900/8 bg-surface py-16 lg:py-24">
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <Reveal>
@@ -16,7 +16,7 @@ export function ContactPreviewSection() {
               title="Hyderabad desk · nationwide & export reach"
               subtitle="Visit us at Jeedimetla industrial estate or reach the trading desk directly for quotes and COA samples."
             />
-            <ul className="mt-6 space-y-2 text-sm text-navy-800/85">
+            <ul className="mt-6 space-y-2 text-sm text-ink-800/85">
               {CONTACT.addressLines.map((l) => (
                 <li key={l}>{l}</li>
               ))}
@@ -38,28 +38,28 @@ export function ContactPreviewSection() {
             </div>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="rounded-3xl border border-navy-900/10 bg-white p-6 shadow-sm lg:p-8">
-              <p className="text-xs font-bold uppercase tracking-widest text-brand-red">
+            <div className="rounded-3xl border border-ink-900/10 bg-white p-6 shadow-sm lg:p-8">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand">
                 Quick links
               </p>
-              <ul className="mt-4 space-y-3 text-sm font-semibold text-navy-900">
+              <ul className="mt-4 space-y-3 text-sm font-semibold text-ink-900">
                 <li>
-                  <Link className="hover:text-brand-red" href="/contact">
+                  <Link className="hover:text-brand" href="/contact">
                     Full contact page with map →
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:text-brand-red" href="/products">
+                  <Link className="hover:text-brand" href="/products">
                     Searchable product catalog →
                   </Link>
                 </li>
                 <li>
-                  <Link className="hover:text-brand-red" href="/about">
+                  <Link className="hover:text-brand" href="/about">
                     Company profile →
                   </Link>
                 </li>
               </ul>
-              <p className="mt-6 text-xs leading-relaxed text-navy-800/60">
+              <p className="mt-6 text-xs leading-relaxed text-ink-800/60">
                 Typical response within one business day for standard product inquiries. Campaign and
                 contract discussions may include technical review.
               </p>

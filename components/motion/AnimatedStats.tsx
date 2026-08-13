@@ -46,7 +46,7 @@ export function AnimatedStats({
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: reduce ? 0 : i * 0.08, duration: 0.45 }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
+          className="group rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-md transition-colors duration-300 hover:border-copper/40 hover:bg-white/[0.09]"
         >
           <StatNumber
             target={item.value}
@@ -54,7 +54,7 @@ export function AnimatedStats({
             active={on}
             reduce={reduce}
           />
-          <p className="mt-2 text-sm font-medium text-white/70">{item.label}</p>
+          <p className="mt-3 text-sm font-medium leading-snug text-white/65">{item.label}</p>
         </motion.div>
       ))}
     </div>
@@ -75,10 +75,10 @@ function StatNumber({
   const n = useCountUp(target, 1400, active && !reduce);
   const display = reduce ? target : active ? n : 0;
   return (
-    <p className="text-4xl font-bold tracking-tight text-white lg:text-5xl">
+    <p className="text-4xl font-bold tabular-nums tracking-tight text-white lg:text-5xl">
       {display}
       {suffix ? (
-        <span className="text-2xl font-semibold text-white/80">{suffix}</span>
+        <span className="text-2xl font-semibold text-copper-200">{suffix}</span>
       ) : null}
     </p>
   );

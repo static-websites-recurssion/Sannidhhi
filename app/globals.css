@@ -3,14 +3,41 @@
 @theme {
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 
-  --color-navy-950: #050a14;
-  --color-navy-900: #0a1628;
-  --color-navy-800: #0f2744;
-  --color-navy-700: #14365c;
-  --color-brand-red: #c41e3a;
-  --color-brand-red-dark: #9b1830;
-  --color-surface: #f6f8fb;
-  --color-surface-warm: #fafbfc;
+  /* ── Brand ─────────────────────────────────────────────────────────────
+     Sampled directly from the Sannidhhi mark: the deep burgundy "S" and the
+     copper ring that encircles it. */
+  --color-brand: #780018;
+  --color-brand-900: #45000e;
+  --color-brand-800: #5c0013;
+  --color-brand-700: #6b0016;
+  --color-brand-600: #94102a;
+  --color-brand-500: #ad2340;
+  --color-brand-400: #c4485f;
+  --color-brand-200: #e9bcc5;
+  --color-brand-100: #f6e4e8;
+
+  /* Copper — the ring, used for accents, rules and eyebrow text */
+  --color-copper: #8b4a26;
+  --color-copper-700: #6d3819;
+  --color-copper-500: #a55e33;
+  --color-copper-400: #bd7c4a;
+  --color-copper-200: #e4c3a4;
+  --color-copper-100: #f5e7da;
+
+  /* Ink — a warm near-black that sits under the burgundy instead of cold navy */
+  --color-ink-950: #140809;
+  --color-ink-900: #1e0d10;
+  --color-ink-800: #32191d;
+  --color-ink-700: #4a262c;
+  --color-ink-600: #6b3e45;
+
+  /* Surfaces */
+  --color-surface: #f8f4f2;
+  --color-surface-warm: #fdfbfa;
+  --color-line: #e8dcd7;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 @layer base {
@@ -18,10 +45,21 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-surface-warm text-navy-900 antialiased;
+    @apply bg-surface-warm text-ink-900 antialiased;
   }
   ::selection {
-    @apply bg-brand-red/20 text-navy-900;
+    @apply bg-brand/15 text-ink-900;
+  }
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.022em;
+  }
+  /* Keep focus rings visible and on-brand */
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 0.375rem;
   }
 }
 
@@ -29,4 +67,56 @@
   text-wrap: balance;
 }
 
-/* Reduced motion: Framer Motion respects useReducedMotion in components */
+@utility text-pretty {
+  text-wrap: pretty;
+}
+
+/* Burgundy → copper gradient text, for the accent word in a heading */
+@utility text-gradient-brand {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-brand) 0%,
+    var(--color-brand-600) 45%,
+    var(--color-copper) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hairline copper rule used under eyebrows and section headings */
+@utility rule-copper {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-copper) 0%,
+    var(--color-copper-200) 60%,
+    transparent 100%
+  );
+}
+
+/* Fine engineering grid, for dark hero/CTA panels */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Soft elevation that reads warm rather than grey */
+@utility shadow-warm {
+  box-shadow:
+    0 1px 2px rgba(30, 13, 16, 0.04),
+    0 8px 24px -12px rgba(30, 13, 16, 0.16);
+}
+
+@utility shadow-warm-lg {
+  box-shadow:
+    0 2px 4px rgba(30, 13, 16, 0.05),
+    0 24px 48px -20px rgba(30, 13, 16, 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -23,8 +23,8 @@ const items = [
 
 export function WhyChooseSection() {
   return (
-    <section className="relative overflow-hidden border-y border-navy-900/8 bg-navy-900 py-16 text-white lg:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(196,30,58,0.35),transparent_45%),radial-gradient(circle_at_100%_100%,rgba(20,54,92,0.5),transparent_40%)]" />
+    <section className="relative overflow-hidden border-y border-ink-900/8 bg-ink-900 py-16 text-white lg:py-24">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(120,0,24,0.35),transparent_45%),radial-gradient(circle_at_100%_100%,rgba(139,74,38,0.5),transparent_40%)]" />
       <Container className="relative">
         <Reveal>
           <SectionHeading

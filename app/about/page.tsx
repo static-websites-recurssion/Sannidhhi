@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, getSiteUrl } from "@/lib/constants";
+import { OG_IMAGE, SITE_NAME, getSiteUrl } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/motion/Reveal";
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "About",
   description: `Learn about ${SITE_NAME}—mission, vision, quality commitment, and supply network strength for industrial chemical buyers.`,
   openGraph: {
+    images: [OG_IMAGE],
     title: `About | ${SITE_NAME}`,
     url: `${getSiteUrl()}/about`,
   },
@@ -27,9 +28,9 @@ export default function AboutPage() {
   return (
     <>
       <JsonLd data={aboutJsonLd} />
-      <section className="relative overflow-hidden border-b border-navy-900/10 bg-navy-900 py-16 text-white lg:py-20">
+      <section className="relative overflow-hidden border-b border-ink-900/10 bg-ink-900 py-16 text-white lg:py-20">
         <MoleculeBg className="pointer-events-none absolute -right-20 top-0 h-full w-[70%] opacity-40" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(196,30,58,0.35),transparent_45%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(120,0,24,0.35),transparent_45%)]" />
         <Container className="relative">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/55">
             About us
@@ -46,7 +47,7 @@ export default function AboutPage() {
             <Button href="/products" variant="secondary" className="rounded-2xl">
               Product catalog
             </Button>
-            <Button href="/contact" variant="outline" className="rounded-2xl border-white/35 text-white">
+            <Button href="/contact" variant="outlineLight" className="rounded-2xl">
               Talk to the desk
             </Button>
           </div>
@@ -61,7 +62,7 @@ export default function AboutPage() {
               title="Company overview"
               subtitle="Headquartered in Hyderabad’s industrial corridor, we serve manufacturers who treat chemistry as a critical input—not a commodity afterthought."
             />
-            <div className="mt-6 space-y-4 text-sm leading-relaxed text-navy-800/85">
+            <div className="mt-6 space-y-4 text-sm leading-relaxed text-ink-800/85">
               <p>
                 Our team combines sourcing relationships across domestic and international producers
                 with on-ground release checks that align to your incoming material standards.
@@ -74,16 +75,16 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.06}>
             <div className="grid gap-6">
-              <div className="rounded-2xl border border-navy-900/10 bg-surface/80 p-6">
-                <h2 className="text-lg font-bold text-navy-900">Mission</h2>
-                <p className="mt-2 text-sm leading-relaxed text-navy-800/80">
+              <div className="rounded-2xl border border-ink-900/10 bg-surface/80 p-6">
+                <h2 className="text-lg font-bold text-ink-900">Mission</h2>
+                <p className="mt-2 text-sm leading-relaxed text-ink-800/80">
                   Enable industrial growth through dependable chemical supply—transparent specs,
                   ethical sourcing, and execution that respects your line uptime.
                 </p>
               </div>
-              <div className="rounded-2xl border border-navy-900/10 bg-surface/80 p-6">
-                <h2 className="text-lg font-bold text-navy-900">Vision</h2>
-                <p className="mt-2 text-sm leading-relaxed text-navy-800/80">
+              <div className="rounded-2xl border border-ink-900/10 bg-surface/80 p-6">
+                <h2 className="text-lg font-bold text-ink-900">Vision</h2>
+                <p className="mt-2 text-sm leading-relaxed text-ink-800/80">
                   Become the preferred trading partner for mid-to-large chemical consumers across
                   India and selective export corridors—known for technical credibility and speed.
                 </p>
@@ -93,7 +94,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="border-y border-navy-900/8 bg-surface py-16 lg:py-24">
+      <section className="border-y border-ink-900/8 bg-surface py-16 lg:py-24">
         <Container>
           <Reveal>
             <SectionHeading
@@ -119,9 +120,9 @@ export default function AboutPage() {
               },
             ].map((x, i) => (
               <Reveal key={x.t} delay={i * 0.06}>
-                <div className="h-full rounded-2xl border border-navy-900/10 bg-white p-6 shadow-sm">
-                  <h3 className="font-bold text-navy-900">{x.t}</h3>
-                  <p className="mt-2 text-sm text-navy-800/80">{x.d}</p>
+                <div className="h-full rounded-2xl border border-ink-900/10 bg-white p-6 shadow-sm">
+                  <h3 className="font-bold text-ink-900">{x.t}</h3>
+                  <p className="mt-2 text-sm text-ink-800/80">{x.d}</p>
                 </div>
               </Reveal>
             ))}
@@ -137,23 +138,23 @@ export default function AboutPage() {
               title="Supply network strength"
               subtitle="Alternate producers, backup origins, and packaging flexibility—so campaigns survive volatility."
             />
-            <ul className="mt-6 space-y-3 text-sm text-navy-800/85">
+            <ul className="mt-6 space-y-3 text-sm text-ink-800/85">
               <li className="flex gap-2">
-                <span className="text-brand-red">▸</span>
+                <span className="text-brand">▸</span>
                 Domestic tanker, ISO, and drum programs with scheduled windows.
               </li>
               <li className="flex gap-2">
-                <span className="text-brand-red">▸</span>
+                <span className="text-brand">▸</span>
                 Import coordination for grades not economically available locally.
               </li>
               <li className="flex gap-2">
-                <span className="text-brand-red">▸</span>
+                <span className="text-brand">▸</span>
                 Project stocking discussions for turnaround and capacity expansion phases.
               </li>
             </ul>
           </Reveal>
           <Reveal delay={0.08}>
-            <div className="rounded-3xl border border-navy-900/10 bg-gradient-to-br from-navy-900 to-navy-950 p-8 text-white shadow-xl">
+            <div className="rounded-3xl border border-ink-900/10 bg-gradient-to-br from-ink-900 to-ink-950 p-8 text-white shadow-xl">
               <h2 className="text-xl font-bold">Experience &amp; trust</h2>
               <p className="mt-4 text-sm leading-relaxed text-white/75">
                 Our value is measured in repeat campaigns: plants that return because releases match

@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingEnquiry } from "@/components/FloatingEnquiry";
 import { JsonLd } from "@/components/JsonLd";
-import { CONTACT, SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/constants";
+import { CONTACT, OG_IMAGE, SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/constants";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -35,6 +35,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+    shortcut: ["/favicon.ico"],
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -43,12 +51,14 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,
     description:
       "Trusted chemical solutions for industrial excellence. Bulk supply, documented quality, export execution.",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,
     description:
       "Industrial & commodity chemicals for manufacturers across India and export markets.",
+    images: [OG_IMAGE.url],
   },
   robots: {
     index: true,
@@ -60,7 +70,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a1628",
+  themeColor: "#1e0d10",
   width: "device-width",
   initialScale: 1,
 };
@@ -70,7 +80,8 @@ const orgJsonLd = {
   "@type": "Organization",
   name: SITE_NAME,
   url: siteUrl,
-  logo: `${siteUrl}/assets/logo-mark.svg`,
+  logo: `${siteUrl}/assets/logo.png`,
+  image: `${siteUrl}/assets/og-image.png`,
   description: SITE_TAGLINE,
   address: {
     "@type": "PostalAddress",

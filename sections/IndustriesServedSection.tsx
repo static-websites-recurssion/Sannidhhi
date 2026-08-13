@@ -30,12 +30,12 @@ export function IndustriesServedSection() {
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {INDUSTRIES.map((ind, i) => (
             <Reveal key={ind.id} delay={i * 0.05}>
-              <div className="flex h-full flex-col rounded-2xl border border-navy-900/10 bg-surface/60 p-5 transition hover:border-brand-red/25 hover:bg-white">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy-900 text-white shadow-md shadow-navy-900/20">
+              <div className="flex h-full flex-col rounded-2xl border border-ink-900/10 bg-surface/60 p-5 transition hover:border-brand/25 hover:bg-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-900 text-white shadow-md shadow-ink-900/20">
                   {icons[ind.id] ?? <IconCube />}
                 </div>
-                <h3 className="mt-4 font-bold text-navy-900">{ind.title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-navy-800/75">
+                <h3 className="mt-4 font-bold text-ink-900">{ind.title}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-800/75">
                   {ind.description}
                 </p>
               </div>
@@ -45,7 +45,7 @@ export function IndustriesServedSection() {
         <div className="mt-10">
           <Link
             href="/industries"
-            className="text-sm font-semibold text-brand-red hover:underline"
+            className="text-sm font-semibold text-brand hover:underline"
           >
             Industry overview page →
           </Link>

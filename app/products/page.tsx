@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, getSiteUrl } from "@/lib/constants";
+import { OG_IMAGE, SITE_NAME, getSiteUrl } from "@/lib/constants";
 import { PRODUCTS } from "@/data/products";
 import { Container } from "@/components/ui/Container";
 import { ProductCatalogClient } from "@/components/products/ProductCatalogClient";
@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Product catalog",
   description: `Search ${SITE_NAME} industrial chemical catalog—solvents, commodities, polymers, additives, and specialty lines with CAS references and packaging options.`,
   openGraph: {
+    images: [OG_IMAGE],
     title: `Product catalog | ${SITE_NAME}`,
     url: `${getSiteUrl()}/products`,
   },
@@ -31,8 +32,11 @@ export default function ProductsPage() {
   return (
     <>
       <JsonLd data={itemList} />
-      <section className="border-b border-navy-900/10 bg-gradient-to-b from-navy-900 to-navy-950 py-14 text-white lg:py-16">
-        <Container>
+      <section className="relative overflow-hidden border-b border-copper/20 bg-ink-950 py-14 text-white lg:py-16">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_-10%,rgba(120,0,24,0.45),transparent_60%),radial-gradient(ellipse_at_90%_40%,rgba(139,74,38,0.25),transparent_55%)]" />
+        <div className="bg-grid pointer-events-none absolute inset-0 opacity-50" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-copper-400/50 to-transparent" />
+        <Container className="relative">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/55">
             Catalog
           </p>
