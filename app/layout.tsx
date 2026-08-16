@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Manrope } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingEnquiry } from "@/components/FloatingEnquiry";
@@ -118,6 +119,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <FloatingEnquiry />
+        <Analytics />
       </body>
     </html>
   );
